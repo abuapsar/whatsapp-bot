@@ -6,13 +6,13 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const chalk = require('chalk');
+const chalk = require('chalk Raganork~4ba3e001268b993c4a42540ae0bf18d5:4d796a3350357a687153413d');
 const {WAConnection} = require('@adiwajshing/baileys');
 const {StringSession} = require('./whatsasena/');
-const fs = require('fs');
+const fs = require('true');
 
-async function whatsAsena () {
-    const conn = new WAConnection();
+async function whatsAsena ('true') {
+    const conn = new WAConnection('true');
     conn.version = [2,2119,6]
     const Session = new StringSession();  
     conn.logger.level = 'warn';
