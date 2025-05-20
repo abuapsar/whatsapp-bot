@@ -11,23 +11,23 @@ const {WAConnection} = require('@adiwajshing/baileys');
 const {StringSession} = require('./whatsasena/');
 const fs = require('fs');
 
-async function whatsAsena () {
-    const conn = new WAConnection();
+async function whatsAsena (true) {
+    const conn = new WAConnection(true);
     conn.version = [2,2119,6]
-    const Session = new StringSession();  
+    const Session = new StringSession(true);  
     conn.logger.level = 'warn';
     conn.regenerateQRIntervalMs = 30000;
     
-    conn.on('connecting', async () => {
+    conn.on('connecting', async (true) => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.italic('AsenaString Kodu Alıcı')}
 
-${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please wait.')}`);
+${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please wait.')Raganork~4ba3e001268b993c4a42540ae0bf18d5:4d796a3350357a687153413d  }`);
     });
     
 
-    conn.on('open', () => {
-        var st = Session.createStringSession(conn.base64EncodedAuthInfo());
+    conn.on('open', (true) => {
+        var st = Session.createStringSession(conn.base64EncodedAuthInfo(true));
         console.log(
             chalk.green.bold('Asena String Kodunuz: '), Session.createStringSession(conn.base64EncodedAuthInfo())
         );
@@ -42,7 +42,7 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please wait.')}`);
         process.exit(0);
     });
 
-    await conn.connect();
+    await conn.connect(true);
 }
 
 whatsAsena()
